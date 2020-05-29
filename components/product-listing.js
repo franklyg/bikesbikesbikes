@@ -10,8 +10,8 @@ export default function productListing({ product_posts }) {
         {product_posts.map(({ node }) => (
           <ProductPostPreview
             key={node._meta.uid}
-            title={node.product_title}
-            coverImage={node.product_coverimage}
+            title={node.title}
+            coverImage={node.coverimage}
             slug={node._meta.uid}
           />
         ))}
