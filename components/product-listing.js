@@ -1,18 +1,16 @@
 import ProductPostPreview from '../components/product-post-preview'
 
-export default function productListing({ product_posts }) {
+export default function productListing({ posts }) {
   return (
-    <section>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-        Featured Products
-      </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32">
-        {product_posts.map(({ node }) => (
+    <section className="mt-24">
+      <div className="grid grid-cols-2 md:grid-cols-4 col-gap-4 row-gap-20 md:row-gap-32 mb-32">
+        {posts.map(({ node }) => (
           <ProductPostPreview
             key={node._meta.uid}
-            title={node.title}
-            coverImage={node.coverimage}
-            slug={node._meta.uid}
+            title={node.product_title}
+            coverImage={node.product_image}
+            price={node.product_price}
+            link={node.product_link}
           />
         ))}
       </div>

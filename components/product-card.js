@@ -3,7 +3,7 @@ import { RichText } from 'prismic-reactjs'
 import Date from '../components/date'
 import CoverImage from './cover-image'
 
-export default function PostPreview({
+export default function ProductCard({
   title,
   coverImage,
   date,
@@ -29,5 +29,22 @@ export default function PostPreview({
         </div>
       </a>
     </Link>
+  )
+}
+
+export default function productListing({ posts }) {
+  return (
+    <section className="mt-24">
+      <div className="grid grid-cols-2 md:grid-cols-4 col-gap-4 row-gap-20 md:row-gap-32 mb-32">
+        {posts.map(({ node }) => (
+          <ProductPostPreview
+            title={node.product_title}
+            coverImage={node.product_image}
+            price={node.product_price}
+            link={node.product_link}
+          />
+        ))}
+      </div>
+    </section>
   )
 }

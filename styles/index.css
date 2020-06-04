@@ -5,5 +5,78 @@
 @tailwind utilities;
 
 body{
-  background: skyblue;
+  background: #ececec;
+}
+.hero-image{
+  height: 50vh;
+  display: flex;
+  flex: 1 100%;
+  justify-content: center;
+  align-items: center;
+}
+.main-headline{
+  position: relative;
+  display: inline-table;
+}
+.main-headline:after{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: .1em;
+  bottom: 0;
+  background: #000;
+  display: block;
+  animation: underlineAnimate 1s forwards;
+}
+@keyframes underlineAnimate {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+.navigation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 100;
+}
+.navigation .link-collection{
+  text-align: right;
+}
+.navigation .link-item{
+  text-align: right;
+}
+
+/* .navigation .link-item{
+  transition: .5s all;
+}
+.navigation .link-item:hover{
+  background: #fff;
+} */
+
+.product-card{
+  background: #fefefe;
+}
+.product-card-image{
+  overflow: hidden;
+}
+.product-card-image .image{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.product-card-image .image img{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: block;
+  margin: auto;
+
 }
