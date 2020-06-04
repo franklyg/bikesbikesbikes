@@ -10,7 +10,7 @@ export default function Layout({ preview, children }) {
       <Meta />
       <Navigation />
       <div className="min-h-screen pt-20">
-        <main className="pt-10">{children}</main>
+        <main>{children}</main>
       </div>
       <Footer />
     </>

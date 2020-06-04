@@ -8,11 +8,28 @@ body{
   background: #ececec;
 }
 .hero-image{
-  height: 50vh;
-  display: flex;
-  flex: 1 100%;
-  justify-content: center;
-  align-items: center;
+  background: rgba(0,0,0, .5) url(../img/hero_2.jpg) center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+}
+.hero-image h1{
+  position: relative;
+  z-index: 2;
+}
+.hero-image:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+  background: rgba(0,0,0,.5);
+  z-index: 0;
+
 }
 .main-headline{
   position: relative;
