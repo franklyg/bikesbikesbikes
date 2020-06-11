@@ -27,52 +27,73 @@ class ProductCard extends React.Component{
         // Product Card
         if (slice.__typename === 'Index_pageBodyProduct_card') {
           const productCardItem = [slice].map(function(productRow, productRowIndex){
-            return(
-              <div className="grid grid-cols-2 md:grid-cols-4 col-gap-4 row-gap-20 md:row-gap-32 mb-8" key={productRowIndex}>
 
+            return(
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 col-gap-4 row-gap-4 md:row-gap-6 mb-6" key={productRowIndex}>
                 {productRow.fields.map(function(card, cardIndex){
                   return(
-                    <Link href={`${card.product_card_link.url}`} key={cardIndex}>
-                      <a className="shadow-small product-card hover:shadow-medium transition-shadow duration-200">
-                        <div>
-                          <div className="product-card-image h-56">
-                            <CoverImage
-                              title={RichText.asText(card.product_card_title)}
-                              url={card.product_card_image.url}
-                            />
-                          </div>
-                          <div className="text-3xl leading-snug p-4">
-                              <RichText render={card.product_card_title} />
-                              <RichText render={card.product_card_price} />
-                          </div>
+                    <a href={card.product_card_link.url} className="shadow-small product-card hover:shadow-medium transition-shadow duration-200 border-solid border-2 border-gray-100 " key={cardIndex} target="_blank">
+                      <div>
+                        <div className="product-card-image h-40 md:h-56 lg:h-40 xl:h-64 mb-6">
+                          <CoverImage
+                            title={RichText.asText(card.product_card_title)}
+                            url={card.product_card_image.url}
+                          />
                         </div>
-                      </a>
-                    </Link>
+                        <h3 className="product-name px-4 text-2xl py-2 font-poppins">
+                          <RichText render={card.product_card_title} />
+                        </h3>
+                        <div className="px-4 pb-2 font-poppins">
+                          <p className="product-price text-2xl font-bold pt-3 border-t-2 border-gray-200">
+                            <RichText render={card.product_card_price} />
+                          </p>
+                        </div>
+                      </div>
+                      <div className="buy-tag font-bold py-2 px-4 font-abel rounded-bl-lg flex grid grid-cols-2 items-center justify-end">
+                        <span className="col-span-1">View Now</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="arrow w-4 h-4 col-span-1" viewBox="0 0 24 24"><path d="M17.428 5h-17.428l6.616 7-6.616 7h17.428l6.572-7z"/></svg>
+                      </div>
+                    </a>
                   )
                 })}
               </div>
             )
+
           })
           return productCardItem;
+
           // Product Specific
         }else if(slice.__typename === 'Index_pageBodyProduct_page_specific_link') {
             const productSpecificItem = slice.fields.map(function(pageSpecific, pageSpecificIndex){
+              console.log(RichText.asText(pageSpecific.product_page_link))
               return (
-                <div className="product-card grid grid-cols-2 flex items-center shadow-small hover:shadow-medium transition-shadow duration-200 mb-8 grid-cols-2" key={pageSpecificIndex}>
-                  <div className="product-card-image h-64">
-                    <CoverImage
-                      title={RichText.asText(pageSpecific.product_page)}
-                      url={pageSpecific.product_image.url}
-                    />
-                  </div>
-                  <div className="text-3xl leading-snug p-4 text-center">
-                    <RichText render={pageSpecific.product_page} />
-                  </div>
-                </div>
+                <Link href="${pageSpecific.product_page_link}" as={`${RichText.asText(pageSpecific.product_page_link)}`}>
+                  <a className="specific-product-item grid md:grid-cols-2 grid-cols-1 flex items-center shadow-small hover:shadow-medium transition-shadow duration-200 mb-6" key={pageSpecificIndex}>
+                    <div className="product-card-image lg:h-110 sm:h-64 h-64" style={{background: 'url('+pageSpecific.product_image.url +')'}}>
+                    </div>
+                    <div className="specific-item-content text-6xl leading-snug p-4 text-center flex grid grid-cols-8 items-center justify-end lg:h-110 sm:h-64 h-64">
+                      <div className="md:col-span-6 col-span-8 font-poppins font-bold">
+                        <RichText render={pageSpecific.product_page_title}/>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="arrow w-34 h-16 md:col-span-1 col-span-8 md:block hidden" viewBox="0 0 24 24"><path d="M17.428 5h-17.428l6.616 7-6.616 7h17.428l6.572-7z"/></svg>
+                    </div>
+                  </a>
+                </Link>
               );
             });
             return productSpecificItem;
-          }else {
+
+            // Product Title
+          }else if(slice.__typename === 'Index_pageBodyPage_title') {
+              const pageTitleItem = slice.fields.map(function(pageTitle, pageTitleIndex){
+                return (
+                  <h2 className="pb-8 font-bold font-abel text-5xl" key={pageTitleIndex}>
+                    <RichText render={pageTitle.page_title} />
+                  </h2>
+                );
+              });
+              return pageTitleItem;
+            } else {
             // Return null by default
             return null;
           }

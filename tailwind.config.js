@@ -17,18 +17,24 @@ module.exports = {
       lineHeight: {
         tight: 1.2,
       },
+      fontFamily: {
+        'abel': ['Abel', 'Arial'],
+        'poppins': ['Poppins', 'Arial']
+      },
       fontSize: {
         '5xl': '2.5rem',
         '6xl': '2.75rem',
         '7xl': '4.5rem',
         '8xl': '6.25rem',
       },
-      fontFamily: {
-        'abel': ['Abel', 'Arial']
-      },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',
         medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
+      },
+      height: {
+        76: '18rem',
+        88: '20rem',
+        110: '22rem',
       },
     },
   },

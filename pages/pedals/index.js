@@ -7,7 +7,7 @@ export default function PedalsPage({ preview, allPosts }) {
     <>
       <Layout>
         <Container>
-          <h1 className="main-headline text-6xl font-bold">pedals.</h1>
+          <h1 className="main-headline text-6xl font-bold mb-8 pt-10 mb-8">pedals.</h1>
         </Container>
       </Layout>
     </>
