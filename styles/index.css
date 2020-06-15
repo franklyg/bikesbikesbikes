@@ -212,6 +212,7 @@ svg.arrow{
 }
 .link-collection.active{
   right: 0;
+  transition: .3s all;
 }
 
 .link-collection a{
