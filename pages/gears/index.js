@@ -43,7 +43,7 @@ class ProductCard extends React.Component{
                           </p>
                         </div>
                       </div>
-                      <div className="buy-tag font-bold py-2 px-4 font-abel rounded-bl-lg flex grid grid-cols-2 items-center justify-end  hidden md:block">
+                      <div className="buy-tag font-bold py-2 px-4 font-abel rounded-bl-lg grid grid-cols-2 items-center justify-end  hidden md:flex">
                         <span className="col-span-1">View Now</span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="arrow w-4 h-4 col-span-1" viewBox="0 0 24 24"><path d="M17.428 5h-17.428l6.616 7-6.616 7h17.428l6.572-7z"/></svg>
                       </div>
