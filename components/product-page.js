@@ -5,7 +5,7 @@ import {RichText} from 'prismic-reactjs';
 
 class ProductPage extends React.Component{
 
-  constructor(props) {
+  constructor(props, {posts}) {
     super(props);
     this.state = {
       document: props
@@ -13,8 +13,6 @@ class ProductPage extends React.Component{
   }
 
   render() {
-    
-    console.log(this.state.document)
 
     if (this.state.document) {
 
@@ -27,7 +25,7 @@ class ProductPage extends React.Component{
 
     return(
       <div>
-        <h1>k</h1>
+        <h1>{this.props.test}</h1>
       </div>
     )
 
@@ -36,10 +34,3 @@ class ProductPage extends React.Component{
 }
 
 export default ProductPage;
-
-export async function getStaticProps({ preview = false, previewData }) {
-  const allPosts = await gearsPageQuery(previewData)
-  return {
-    props: { preview, allPosts },
-  }
-}

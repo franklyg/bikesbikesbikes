@@ -20,7 +20,7 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/gears": [
+    "/featured": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
