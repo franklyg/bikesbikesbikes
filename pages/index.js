@@ -94,8 +94,7 @@ class ProductCard extends React.Component{
             return pageTitleItem;
 
             // Online Advert
-          }
-          else if(slice.__typename === 'Index_pageBodyOnline_advert') {
+          }else if(slice.__typename === 'Index_pageBodyOnline_advert') {
             const onlineAdvert = slice.fields.map(function(advertElem, advertElemIndex){
               return (
                 <Link href="${advertElem.advert_link.url}" as={advertElem.advert_link.url}>
