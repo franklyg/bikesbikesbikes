@@ -10,11 +10,20 @@ import { gearsPageQuery } from '../../lib/api';
 
 import ProductPage from '../../components/product-page'
 
-export default function Index({props}){
-  console.log(props)
+export default function Index({allPosts}){
+  const morePosts = allPosts.slice(0)
+  console.log(morePosts)
+
   return(
     <div>
-      <ProductPage test={allPosts}/>
+      <>
+        <Layout>
+          <Container>
+            <h1 className="main-headline text-6xl font-bold mb-8 pt-10 mb-8">gears.</h1>
+            {morePosts.length > 0 && <ProductPage posts={morePosts} uidName="handle-bars"/>}
+          </Container>
+        </Layout>
+      </>
     </div>
   )
 }
