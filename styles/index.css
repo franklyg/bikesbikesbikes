@@ -242,7 +242,7 @@ footer{
   outline: none;
   font-family: 'Poppins', Arial;
 }
-.subscribe-form > input{
+.footer-subscribe > .subscribe-form > [name~=email]{
   font-family: 'Poppins', Arial;
   color: black;
   height: 3rem;
@@ -252,10 +252,10 @@ footer{
   border-radius: 0.125rem;
   outline: none;
 }
-.subscribe-form .msg-alert{
+.footer-subscribe > .subscribe-form .msg-alert{
   padding: .5rem 0 0;
 }
-.subscribe-form .msg-alert p{
+.footer-subscribe > .subscribe-form .msg-alert > p{
   color: white !important;
 }
 

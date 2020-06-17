@@ -44,7 +44,8 @@ class Footer extends React.Component  {
                     name: 'EMAIL',
                     placeholder: 'Email',
                     type: 'email',
-                    required: true
+                    required: true,
+                    className: 'p-3'
                   }
                 ]}
                 // Change predetermined language
