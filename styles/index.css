@@ -231,16 +231,6 @@ footer{
   color: white;
   background: #4f6eea;
 }
-.subscribe-form input[type=email]{
-  font-family: 'Poppins', Arial;
-  color: black;
-  height: 3rem;
-  margin: 0 0 1rem;
-  padding: .5rem;
-  font-size: 1rem;
-  border-radius: 0.125rem;
-  outline: none;
-}
 .subscribe-form button{
   border-radius: 0.125rem;
   align-self: baseline;
@@ -251,6 +241,16 @@ footer{
   font-size: 1.25rem;
   outline: none;
   font-family: 'Poppins', Arial;
+}
+.subscribe-form > input{
+  font-family: 'Poppins', Arial;
+  color: black;
+  height: 3rem;
+  margin: 0 0 1rem;
+  padding: .5rem;
+  font-size: 1rem;
+  border-radius: 0.125rem;
+  outline: none;
 }
 .subscribe-form .msg-alert{
   padding: .5rem 0 0;
