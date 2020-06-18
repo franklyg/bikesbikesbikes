@@ -6,6 +6,14 @@ import Mailchimp from 'react-mailchimp-form'
 
 class Footer extends React.Component  {
 
+  componentDidMount(){
+    document.querySelector('.subscribe-form').childNodes[0].style.height = '3rem'
+    document.querySelector('.subscribe-form').childNodes[0].style.padding = '.5rem'
+    document.querySelector('.subscribe-form').childNodes[0].style.fontSize = '1rem'
+    document.querySelector('.subscribe-form').childNodes[0].style.borderRadius = '0.125rem'
+    document.querySelector('.subscribe-form').childNodes[0].style.outline = 'none'
+  }
+
   render(){
     return (
       <footer className="bg-accent-1 border-t border-accent-2 py-20 mt-20">
@@ -37,15 +45,13 @@ class Footer extends React.Component  {
               <p className="mt-3 mb-6">Get the lastest on what's coming out!</p>
               <Mailchimp
                 action='https://ineedbikeparts.us10.list-manage.com/subscribe/post?u=85ed7c9f37af452193f0a22ed&amp;id=bec81044fb'
-
                 //Adding multiple fields:
                 fields={[
                   {
                     name: 'EMAIL',
                     placeholder: 'Email',
                     type: 'email',
-                    required: true,
-                    className: 'p-3'
+                    required: true
                   }
                 ]}
                 // Change predetermined language
