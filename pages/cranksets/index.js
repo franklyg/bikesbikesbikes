@@ -12,8 +12,6 @@ import ProductPage from '../../components/product-page'
 
 export default function Index({allPosts}){
   const morePosts = allPosts.slice(0)
-  console.log(morePosts)
-
   return(
     <div>
       <>
