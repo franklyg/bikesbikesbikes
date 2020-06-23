@@ -12,8 +12,7 @@ class MainNavigation extends React.Component{
   getInitialState(){
     return {"showHideSidenav":"not-active"};
   }
-
-
+  
   render(){
     return(
       <nav className="navigation flex items-center shadow-small h-20">

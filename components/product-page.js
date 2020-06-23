@@ -1,7 +1,6 @@
 import Layout from './layout'
 import Container from './container'
 import Head from 'next/head'
-import Link from 'next/link'
 import CoverImage from './cover-image'
 import {RichText} from 'prismic-reactjs';
 
