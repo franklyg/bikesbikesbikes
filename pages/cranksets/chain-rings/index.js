@@ -28,7 +28,7 @@ export default function Index({allPosts}){
                 </a>
               </Link>
             </div>
-            {morePosts.length > 0 && <ProductPage posts={morePosts} uidName="chains"/>}
+            {morePosts.length > 0 && <ProductPage posts={morePosts} uidName="chain-rings"/>}
           </Container>
         </Layout>
       </>

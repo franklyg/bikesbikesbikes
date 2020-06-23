@@ -27,18 +27,6 @@
     "/cranksets/chains": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/frames": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/handlebars": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/next/dist/pages/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }

@@ -6,9 +6,9 @@ import CoverImage from './cover-image'
 import {RichText} from 'prismic-reactjs';
 
 class ProductCard extends React.Component{
+
   render(){
     const { posts, ...props } = this.props;
-    console.log(posts, props)
 
     const allPostContent = posts.map(function(post, postIndex){
 
@@ -19,7 +19,8 @@ class ProductCard extends React.Component{
           if (slice.__typename === 'Product_pageBodyProduct_card') {
             const productCardItem = [slice].map(function(productRow, productRowIndex){
               return(
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-gap-8 row-gap-4 md:row-gap-6 mb-6" key={productRowIndex}>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:col-gap-4 lg:col-gap-4 xl:col-gap-8 row-gap-4 md:row-gap-4 lg:row-gap-4 xl:row-gap-8 xl:mb-8 lg:mb-4 md:mb-4" key={productRowIndex}>
                 {productRow.fields.map(function(card, cardIndex){
                     return(
                         <a href={card.product_card_link.url} className="shadow-small product-card hover:shadow-medium transition-shadow duration-200 border-solid border-2 border-gray-100 " key={cardIndex} target="_blank">
@@ -27,7 +28,7 @@ class ProductCard extends React.Component{
                             <div className="product-card-image h-64 md:h-56 lg:h-40 xl:h-64 pb-6" style={{background: 'url('+card.product_card_image.url+')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             </div>
                             <h3 className="product-name px-4 text-1xl py-2 font-poppins">
-                              <RichText render={card.product_card_title} />
+                              {card.product_card_title[0].text.length > 40 ? card.product_card_title[0].text.substring(0, 40) + '...' : card.product_card_title[0].text }
                             </h3>
                             <div className="px-4 pb-2 font-poppins">
                               <p className="product-price text-2xl font-bold pt-3 border-t-2 border-gray-200">
@@ -53,7 +54,7 @@ class ProductCard extends React.Component{
               const productSpecificItem = slice.fields.map(function(pageSpecific, pageSpecificIndex){
                   return (
                     <Link href="${pageSpecific.product_page_link}" as={`${RichText.asText(pageSpecific.product_page_link)}`}>
-                      <a className="specific-product-item grid md:grid-cols-2 grid-cols-1 flex items-center shadow-small hover:shadow-medium transition-shadow duration-200 mb-6" key={pageSpecificIndex}>
+                      <a className="specific-product-item grid md:grid-cols-2 grid-cols-1 flex items-center shadow-small hover:shadow-medium transition-shadow duration-200 xl:mb-8 lg:mb-4 md:mb-4" key={pageSpecificIndex}>
                         <div className="product-card-image lg:h-110 sm:h-64 h-64" style={{background: 'url('+pageSpecific.product_image.url +')'}}>
                         </div>
                         <div className="specific-item-content text-6xl leading-snug p-4 text-center flex grid grid-cols-8 items-center justify-end lg:h-110 sm:h-64 h-64">
@@ -73,9 +74,9 @@ class ProductCard extends React.Component{
                 } else if(slice.__typename === 'Product_pageBodyPage_online_advert') {
                   const onlineAdvert = slice.fields.map(function(advertElem, advertElemIndex){
                     return (
-                      <div className='flex justify-center'>
+                      <div className="flex justify-center xl:mb-8 lg:mb-4 md:mb-4">
                         <Link href="${advertElem.page_advert_link.url}" as={advertElem.page_advert_link.url}>
-                          <a className="online-advert" key={advertElemIndex} target="_blank">
+                          <a className="online-advert shadow-small" key={advertElemIndex} target="_blank">
                             <CoverImage
                               url={advertElem.page_advert_image.url}
                             />
