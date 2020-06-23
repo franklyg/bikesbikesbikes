@@ -97,13 +97,15 @@ class ProductCard extends React.Component{
           }else if(slice.__typename === 'Index_pageBodyOnline_advert') {
             const onlineAdvert = slice.fields.map(function(advertElem, advertElemIndex){
               return (
-                <Link href="${advertElem.advert_link.url}" as={advertElem.advert_link.url}>
-                  <a className="online-advert" key={advertElemIndex} target="_blank">
-                    <CoverImage
-                      url={advertElem.advert_image.url}
-                    />
-                  </a>
-                </Link>
+                <div className='flex justify-center'>
+                  <Link href="${advertElem.advert_link.url}" as={advertElem.advert_link.url}>
+                    <a className="online-advert" key={advertElemIndex} target="_blank">
+                      <CoverImage
+                        url={advertElem.advert_image.url}
+                      />
+                    </a>
+                  </Link>
+                </div>
               );
             });
             return onlineAdvert;

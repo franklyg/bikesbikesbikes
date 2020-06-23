@@ -25,17 +25,17 @@ class MainNavigation extends React.Component{
               </a>
             </Link>
             <div className={`link-collection flex flex-col md:flex-row md:justify-end ${this.state.showHideSidenav}`}>
-              <Link href="/gears">
+              <Link href="/cranksets">
                 <a className="link-item px-6 md:px-3">
                   Cranksets
                 </a>
               </Link>
-              <Link href="/handle-bars">
+              <Link href="/handlebars">
                 <a className="link-item px-6 md:px-3">
                   Handlebars
                 </a>
               </Link>
-              <Link href="/pedals">
+              <Link href="/saddles">
                 <a className="link-item px-6 md:px-3">
                   Saddles
                 </a>
@@ -45,12 +45,12 @@ class MainNavigation extends React.Component{
                   Wheels
                 </a>
               </Link>
-              <Link href="/wheels">
+              <Link href="/frames">
                 <a className="link-item px-6 md:px-3">
                   Frames
                 </a>
               </Link>
-              <Link href="/wheels">
+              <Link href="/accessories">
                 <a className="link-item px-6 md:px-3">
                   Accessories
                 </a>

@@ -10,8 +10,8 @@ export const linkResolver = (doc) => {
     return `/wheels/${doc.uid}`
   }
 
-  if (doc.type === 'gears') {
-    return `/gears/${doc.uid}`
+  if (doc.type === 'cranksets') {
+    return `/cranksets/${doc.uid}`
   }
 
   if (doc.type === 'handle-bars') {

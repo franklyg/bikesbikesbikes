@@ -16,17 +16,17 @@ class ProductCard extends React.Component{
 
         const allPostContentItems = post.node.body.map(function(slice, index){
           // Product Card
-          if (slice.__typename === 'Page_gearsBodyProduct_card') {
+          if (slice.__typename === 'Product_pageBodyProduct_card') {
             const productCardItem = [slice].map(function(productRow, productRowIndex){
               return(
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 col-gap-4 row-gap-4 md:row-gap-6 mb-6" key={productRowIndex}>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-gap-8 row-gap-4 md:row-gap-6 mb-6" key={productRowIndex}>
                 {productRow.fields.map(function(card, cardIndex){
                     return(
                         <a href={card.product_card_link.url} className="shadow-small product-card hover:shadow-medium transition-shadow duration-200 border-solid border-2 border-gray-100 " key={cardIndex} target="_blank">
                           <div>
                             <div className="product-card-image h-64 md:h-56 lg:h-40 xl:h-64 pb-6" style={{background: 'url('+card.product_card_image.url+')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             </div>
-                            <h3 className="product-name px-4 text-2xl py-2 font-poppins">
+                            <h3 className="product-name px-4 text-1xl py-2 font-poppins">
                               <RichText render={card.product_card_title} />
                             </h3>
                             <div className="px-4 pb-2 font-poppins">
@@ -48,7 +48,7 @@ class ProductCard extends React.Component{
               return productCardItem;
             }
             // Product Specific
-            else if(slice.__typename === 'Page_gearsBodyProduct_page_specific_link') {
+            else if(slice.__typename === 'Product_pageBodyProduct_page_specific_link') {
 
               const productSpecificItem = slice.fields.map(function(pageSpecific, pageSpecificIndex){
                   return (
@@ -70,7 +70,22 @@ class ProductCard extends React.Component{
 
                   return productSpecificItem;
 
-                } else {
+                } else if(slice.__typename === 'Product_pageBodyPage_online_advert') {
+                  const onlineAdvert = slice.fields.map(function(advertElem, advertElemIndex){
+                    return (
+                      <div className='flex justify-center'>
+                        <Link href="${advertElem.page_advert_link.url}" as={advertElem.page_advert_link.url}>
+                          <a className="online-advert" key={advertElemIndex} target="_blank">
+                            <CoverImage
+                              url={advertElem.page_advert_image.url}
+                            />
+                          </a>
+                        </Link>
+                      </div>
+                    );
+                  });
+                  return onlineAdvert;
+                }else {
                 // Return null by default
                   return null;
                 }
