@@ -34,7 +34,7 @@ class ProductCard extends React.Component{
                           in={true}
                           appear={true}
                           timeout={300}
-                          classNames="example"
+                          classNames="transition"
                         >
                             <div>
                               <div className="product-card-image h-64 md:h-56 lg:h-40 xl:h-64 pb-6" style={{background: 'url('+card.product_card_image.url+')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
