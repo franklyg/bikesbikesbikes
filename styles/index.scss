@@ -222,6 +222,14 @@ svg.arrow{
   padding-bottom: 1.5rem;
 }
 
+// Transition Classes
+.transition-appear {
+  opacity: 0 !important;
+}
+.transition-appear-active {
+  animation: 1s fadeIn forwards !important;
+}
+
 /* Footer */
 footer{
   background: white;
@@ -253,13 +261,6 @@ $poppins: 'Poppins', Arial;
       }
     }
   }
-}
-
-.transition-appear {
-  opacity: 0 !important;
-}
-.transition-appear-active {
-  animation: 1s fadeIn forwards !important;
 }
 
 
