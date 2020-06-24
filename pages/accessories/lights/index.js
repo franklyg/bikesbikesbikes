@@ -19,7 +19,7 @@ export default function Index({allPosts}){
       <>
         <Layout>
           <Container>
-            <h1 className="main-headline text-6xl font-bold mb-8 pt-10 mb-8">pedals.</h1>
+            <h1 className="main-headline text-6xl font-bold mb-8 pt-10 mb-8">lights.</h1>
             <div className="specific-pages mb-4 lg:mb-8 grid flex grid-cols-1 md:grid-cols-2 lg:grid-cols-4 row-gap-4 md:col-gap-4 text-poppins">
               <Link href="/cranksets">
                 <a className="back-link p-3 text-1xl grid flex grid-cols-8 items-center">
@@ -28,7 +28,7 @@ export default function Index({allPosts}){
                 </a>
               </Link>
             </div>
-            {morePosts.length > 0 && <ProductPage posts={morePosts} uidName="pedals"/>}
+            {morePosts.length > 0 && <ProductPage posts={morePosts} uidName="lights"/>}
           </Container>
         </Layout>
       </>
