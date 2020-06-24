@@ -14,7 +14,10 @@
     "prismic-reactjs": "1.2.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-lazy-load": "^3.0.13",
+    "react-lazyload": "^2.6.8",
     "react-mailchimp-form": "^1.0.2",
+    "react-transition-group": "^4.4.1",
     "sass": "^1.26.8"
   },
   "devDependencies": {

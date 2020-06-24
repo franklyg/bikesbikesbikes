@@ -97,7 +97,7 @@ body{
 .product-card{
   background: #fefefe;
   position: relative;
-  animation: 1s fadeIn forwards;
+  // animation: 1s fadeIn forwards;
   overflow: hidden;
 }
 .product-card:hover{
@@ -265,6 +265,16 @@ $poppins: 'Poppins', Arial;
   }
 }
 
+
+// Lazy Load Transition Classes
+.example-appear {
+  opacity: 0.01;
+}
+.example-appear-active {
+  opacity: 1;
+  transition: all 300ms ease-out;
+
+ }
 /* Responsive */
 
 @media(min-width: 768px){
