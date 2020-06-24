@@ -1,12 +1,6 @@
 {
   "name": "cms-prismic",
   "version": "1.0.0",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/next"
-    }
-  ],
   "scripts": {
     "dev": "next",
     "build": "next build",
