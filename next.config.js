@@ -9,4 +9,5 @@ module.exports = {
     NEXT_EXAMPLE_CMS_PRISMIC_REPOSITORY_LOCALE:
       process.env.NEXT_EXAMPLE_CMS_PRISMIC_REPOSITORY_LOCALE || 'en-us',
   },
+  target: 'serverless',
 }
