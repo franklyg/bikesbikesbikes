@@ -28,7 +28,7 @@ class ProductCard extends React.Component{
                   {productRow.fields.map(function(card, cardIndex){
                     return(
                         <a href={card.product_card_link.url} className="shadow-small product-card hover:shadow-medium transition-shadow duration-200 border-solid border-2 border-gray-100 " key={cardIndex} target="_blank">
-                        <LazyLoad key={cardIndex} height={200} offset={[-100, 0]}>
+                        <LazyLoad key={cardIndex} height={200} offset={100}>
                           <CSSTransition
                             key={cardIndex}
                             in={true}
@@ -67,13 +67,16 @@ class ProductCard extends React.Component{
 
               const productSpecificItem = slice.fields.map(function(pageSpecific, pageSpecificIndex){
                   return (
-                    <LazyLoad key={pageSpecificIndex} height={200} offset={[-100, 0]}>
+                    <LazyLoad key={pageSpecificIndex} height={200} offset={100}>
                       <CSSTransition
                         key={pageSpecificIndex}
                         in={true}
                         appear={true}
                         timeout={1000}
-                        classNames="transition"
+                        classNames={{
+                          appear: "transition-appear",
+                          appearActive: "transition-appear-active"
+                        }}
                       >
                       <a href={`${RichText.asText(pageSpecific.product_page_link)}`} className="specific-product-item grid md:grid-cols-2 grid-cols-1 flex items-center shadow-small hover:shadow-medium transition-shadow duration-200 xl:mb-8 lg:mb-4 md:mb-4 mb-4" key={pageSpecificIndex}>
                         <div className="product-card-image lg:h-110 sm:h-64 h-64" style={{background: 'url('+pageSpecific.product_image.url +')'}}>
@@ -96,7 +99,7 @@ class ProductCard extends React.Component{
                 } else if(slice.__typename === 'Product_pageBodyPage_online_advert') {
                   const onlineAdvert = slice.fields.map(function(advertElem, advertElemIndex){
                     return (
-                      <LazyLoad key={advertElemIndex} height={200} offset={[-100, 0]}>
+                      <LazyLoad key={advertElemIndex} height={200} offset={100, 0}>
                         <CSSTransition
                         key={advertElemIndex}
                         in={true}
