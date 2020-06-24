@@ -1,3 +1,11 @@
+// Transition Classes
+.transition-appear {
+  opacity: 0 !important;
+}
+.transition-appear-active {
+  animation: 1s fadeIn forwards !important;
+}
+
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
@@ -220,14 +228,6 @@ svg.arrow{
 
 .link-collection a{
   padding-bottom: 1.5rem;
-}
-
-// Transition Classes
-.transition-appear {
-  opacity: 0 !important;
-}
-.transition-appear-active {
-  animation: 1s fadeIn forwards !important;
 }
 
 /* Footer */
