@@ -1,10 +1,4 @@
 module.exports = {
-  purge:{
-    content: ['./src/**/*.html'],
-    options: {
-      whitelist: ['transition-appear', 'transition-appear-active'],
-    },
-  },
   theme: {
     extend: {
       colors: {
