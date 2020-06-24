@@ -1,5 +1,4 @@
 .env
 .now
 .vercel
-.next/
 node_modules/

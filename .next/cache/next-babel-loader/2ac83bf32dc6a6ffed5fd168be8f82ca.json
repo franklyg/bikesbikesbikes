@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var EXAMPLE_PATH = 'I Need Bike Parts';\nexport var CMS_NAME = 'I Need Bike Parts';\nexport var CMS_URL = 'https://ineedbikeparts.com/';\nexport var HOME_OG_IMAGE_URL = '../img/inbp-logo.svg';","map":null,"metadata":{},"sourceType":"module"}
