@@ -1,7 +1,6 @@
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
-  purge: {
-    enabled: false,
-  },
   theme: {
     extend: {
       colors: {
@@ -41,4 +40,18 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    plugin(function({ addComponents }){
+      const transitions = {
+        '.transition-appear': {
+          opacity: '0'
+        },
+        '.transition-appear-active': {
+          animation: '1s fadeIn forwards',
+        },
+      }
+
+      addComponents(transitions)
+    })
+  ],
 }
