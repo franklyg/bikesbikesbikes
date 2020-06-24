@@ -10,7 +10,7 @@
     "classnames": "2.2.6",
     "core-util-is": "^1.0.2",
     "date-fns": "2.10.0",
-    "next": "9.2.3-canary.26",
+    "next": "9.3.2",
     "now": "^19.1.1",
     "prismic-javascript": "2.2.0",
     "prismic-reactjs": "1.2.0",
