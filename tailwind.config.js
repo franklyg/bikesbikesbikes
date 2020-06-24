@@ -1,5 +1,3 @@
-const plugin = require('tailwindcss/plugin')
-
 module.exports = {
   purge: false,
   theme: {
@@ -40,19 +38,5 @@ module.exports = {
         110: '22rem',
       },
     },
-  },
-  plugins: [
-    plugin(function({ addComponents }){
-      const transitions = {
-        '.transition-appear': {
-          opacity: '0'
-        },
-        '.transition-appear-active': {
-          animation: '1s fadeIn forwards',
-        },
-      }
-
-      addComponents(transitions)
-    })
-  ],
+  }
 }
