@@ -16,12 +16,3 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
-/* Lazy Load Transition Classes*/
-
-.transition-appear {
-  opacity: 0.01;
-}
-.transition-appear-active {
-  opacity: 1;
-  transition: all 300ms ease-out;
-}

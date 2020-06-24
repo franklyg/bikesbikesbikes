@@ -97,7 +97,6 @@ body{
 .product-card{
   background: #fefefe;
   position: relative;
-  // animation: 1s fadeIn forwards;
   overflow: hidden;
 }
 .product-card:hover{
@@ -235,15 +234,6 @@ $poppins: 'Poppins', Arial;
   background: #4f6eea;
   .subscribe-form {
     color: black;
-    // input{
-    //   font-family: $poppins;
-    //   color: black;
-    //   height: 3rem;
-    //   padding: $input-padding;
-    //   font-size: 1rem;
-    //   border-radius: 0.125rem;
-    //   outline: none;
-    // }
     button{
       border-radius: 0.125rem;
       align-self: baseline;
@@ -266,11 +256,10 @@ $poppins: 'Poppins', Arial;
 }
 
 .transition-appear {
-  opacity: 0.01;
+  opacity: 0 !important;
 }
 .transition-appear-active {
-  opacity: 1;
-  transition: all 300ms ease-out;
+  animation: 1s fadeIn forwards !important;
 }
 
 
