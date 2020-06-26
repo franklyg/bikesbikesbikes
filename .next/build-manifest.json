@@ -24,7 +24,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/next/dist/pages/_error": [
+    "/handlebars": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/handlebars/grips": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

@@ -45,12 +45,12 @@ export default function Index({allPosts}){
                   <svg xmlns="http://www.w3.org/2000/svg" className="arrow w-4 h-4 col-span-1" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
                 </a>
               </Link>
-              <Link href="/accessories/bearings">
+              {/*<Link href="/accessories/bearings">
                 <a className="filter-link shadow-small p-3 text-1xl grid flex grid-cols-8 items-center">
                   <span className="col-span-7">Bearings</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="arrow w-4 h-4 col-span-1" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
                 </a>
-              </Link>
+              </Link>*/}
             </div>
             {morePosts.length > 0 && <ProductPage posts={morePosts} uidName="accessories"/>}
           </Container>

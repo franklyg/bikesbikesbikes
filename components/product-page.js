@@ -8,7 +8,7 @@ import LazyLoad from 'react-lazyload';
 
 // <LazyLoad key={cardIndex} height={200} offset={[-100, 0]}>
 // </LazyLoad>
-
+// style={{background: 'url('+card.product_card_image.url+')', backgroundSize: 'cover', backgroundPosition: 'center' }}
 class ProductCard extends React.Component{
 
   render(){
@@ -37,7 +37,10 @@ class ProductCard extends React.Component{
                             classNames="transition"
                             >
                             <div>
-                              <div className="product-card-image h-64 md:h-56 lg:h-40 xl:h-64 pb-6" style={{background: 'url('+card.product_card_image.url+')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                              <div className="product-card-image h-64 md:h-56 lg:h-40 xl:h-64 pb-6">
+                                <CoverImage
+                                  url={card.product_card_image.url}
+                                />
                               </div>
                               <h3 className="product-name px-4 text-1xl py-2 font-poppins">
                                 {card.product_card_title[0].text.length > 40 ? card.product_card_title[0].text.substring(0, 40) + '...' : card.product_card_title[0].text }

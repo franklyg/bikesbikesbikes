@@ -12,7 +12,7 @@ class MainNavigation extends React.Component{
   getInitialState(){
     return {"showHideSidenav":"not-active"};
   }
-  
+
   render(){
     return(
       <nav className="navigation flex items-center shadow-small h-20">
@@ -44,11 +44,11 @@ class MainNavigation extends React.Component{
                   Wheels
                 </a>
               </Link>
-              <Link href="/frames">
+              {/*<Link href="/frames">
                 <a className="link-item px-6 md:px-3">
                   Frames
                 </a>
-              </Link>
+              </Link>*/}
               <Link href="/accessories">
                 <a className="link-item px-6 md:px-3">
                   Accessories
