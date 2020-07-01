@@ -19,6 +19,14 @@
     ],
     "/_polyfills": [
       "static/runtime/polyfills.js"
+    ],
+    "/accessories": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/wheels": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }
