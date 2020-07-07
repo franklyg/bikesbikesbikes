@@ -9,6 +9,9 @@ import HeroImage from '../components/hero-image'
 import { linkResolver } from '../prismic-config';
 import { indexPageQuery } from '../lib/api'
 
+import ReactGA from 'react-ga';
+const trackingId = "UA-171559296-1"; // Replace with your Google Analytics tracking ID
+
 class ProductCard extends React.Component{
 
   constructor(props) {
@@ -19,6 +22,9 @@ class ProductCard extends React.Component{
   }
 
   render() {
+    ReactGA.initialize(trackingId);
+    ReactGA.pageview('/');
+
     if (this.state.document) {
       const document = this.state.document;
 
