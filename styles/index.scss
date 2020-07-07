@@ -70,13 +70,36 @@ body{
   background-repeat: no-repeat;
   text-indent: -9999px;
   overflow: hidden;
-
 }
 .navigation .link-collection{
   text-align: right;
 }
 .navigation .link-item{
   text-align: right;
+}
+.navigation .link-group{
+  position: relative;
+}
+.navigation .link-group .link-dropdown{
+  position: absolute;
+  background: white;
+  text-align: left;
+  display: none;
+}
+.navigation .link-group:hover .link-dropdown {
+  display: block;
+}
+.navigation .link-group .link-dropdown a{
+  display: block;
+  padding-bottom: .75rem;
+}
+.navigation .link-group .link-dropdown a:last-child{
+  padding-bottom: 0;
+}
+@media(min-width: 728px){
+  .navigation .link-group .link-dropdown{
+    box-shadow: 0px 9px 7px -3px rgba(0, 0, 0, 0.12);
+  }
 }
 .filter-link{
   background: white;
@@ -91,7 +114,6 @@ body{
 .product-card{
   background: #fefefe;
   position: relative;
-  // animation: 1s fadeIn forwards;
   overflow: hidden;
 }
 .product-card:hover{

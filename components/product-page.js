@@ -6,13 +6,16 @@ import {RichText} from 'prismic-reactjs';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import LazyLoad from 'react-lazyload';
 
-// <LazyLoad key={cardIndex} height={200} offset={[-100, 0]}>
-// </LazyLoad>
-// style={{background: 'url('+card.product_card_image.url+')', backgroundSize: 'cover', backgroundPosition: 'center' }}
+import ReactGA from 'react-ga';
+const trackingId = "UA-171559296-1"; // Replace with your Google Analytics tracking ID
+
+
 class ProductCard extends React.Component{
 
   render(){
     const { posts, ...props } = this.props;
+    ReactGA.initialize(trackingId);
+    ReactGA.pageview('/'+this.props.uidName);
 
     const allPostContent = posts.map(function(post, postIndex){
 
@@ -20,7 +23,7 @@ class ProductCard extends React.Component{
 
         const allPostContentItems = post.node.body.map(function(slice, index){
           // Product Card
-          if (slice.__typename === 'Product_pageBodyProduct_card') {
+          if (slice.__typename === props.apiName+'_pageBodyProduct_card') {
             const productCardItem = [slice].map(function(productRow, productRowIndex){
               return(
 
@@ -66,7 +69,7 @@ class ProductCard extends React.Component{
               return productCardItem;
             }
             // Product Specific
-            else if(slice.__typename === 'Product_pageBodyProduct_page_specific_link') {
+            else if(slice.__typename === props.apiName+'_pageBodyProduct_page_specific_link') {
 
               const productSpecificItem = slice.fields.map(function(pageSpecific, pageSpecificIndex){
                   return (
@@ -99,7 +102,7 @@ class ProductCard extends React.Component{
 
                   return productSpecificItem;
 
-                } else if(slice.__typename === 'Product_pageBodyPage_online_advert') {
+                } else if(slice.__typename === props.apiName+'_pageBodyPage_online_advert') {
                   const onlineAdvert = slice.fields.map(function(advertElem, advertElemIndex){
                     return (
                       <LazyLoad key={advertElemIndex} height={200} offset={100, 0}>
@@ -111,9 +114,14 @@ class ProductCard extends React.Component{
                         classNames="transition"
                         >
                         <div className="flex justify-center xl:mb-8 lg:mb-4 md:mb-4 mb-4" key={advertElemIndex}>
-                          <a href={advertElem.page_advert_link.url} className="online-advert shadow-small" key={advertElemIndex} target="_blank">
+                          <a href={advertElem.page_advert_link.url} className="online-advert shadow-small hidden md:block" key={advertElemIndex} target="_blank">
                             <CoverImage
-                              url={advertElem.page_advert_image.url}
+                              url={advertElem.page_advert_image_desktop.url}
+                            />
+                          </a>
+                          <a href={advertElem.page_advert_link.url} className="online-advert shadow-small block md:hidden" key={advertElemIndex} target="_blank">
+                            <CoverImage
+                              url={advertElem.page_advert_image_mobile.url}
                             />
                           </a>
                         </div>

@@ -24,7 +24,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/wheels": [
+    "/saddles": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/saddles/cushions": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/saddles/seatposts": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
