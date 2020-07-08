@@ -51,15 +51,18 @@ class ProductCard extends React.Component{
                           classNames="transition"
                           >
                           <div>
-                            <div className="product-card-image h-64 md:h-56 lg:h-40 xl:h-64 pb-6" style={{background: 'url('+card.product_card_image.url+')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div className="product-card-image h-64 md:h-56 lg:h-40 xl:h-64 pb-6">
+                              <CoverImage
+                                url={card.product_card_image.url}
+                              />
                             </div>
-                            <h3 className="product-name px-4 text-2xl py-2 font-poppins">
+                            <h3 className="product-name px-4 text-1xl py-2 font-poppins">
                               {card.product_card_title[0].text.length > 40 ? card.product_card_title[0].text.substring(0, 40) + '...' : card.product_card_title[0].text }
                             </h3>
                             <div className="px-4 pb-2 font-poppins">
-                              <p className="product-price text-2xl font-bold pt-3 border-t-2 border-gray-200">
-                                <RichText render={card.product_card_price} />
-                              </p>
+                              <div className="product-price text-2xl font-bold pt-3 border-t-2 border-gray-200">
+                                <RichText render={card.product_card_price}/>
+                              </div>
                             </div>
                           </div>
                         </CSSTransition>
