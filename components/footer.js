@@ -33,6 +33,16 @@ class Footer extends React.Component  {
                     Terms & Conditions
                   </a>
                 </Link>
+                <Link href="/about">
+                  <a className="mb-3">
+                    About
+                  </a>
+                </Link>
+                <Link href="/about#faq">
+                  <a className="mb-3">
+                    FAQ
+                  </a>
+                </Link>
               </div>
               <div className="footer-feedback">
                 <h3 className="font-poppins font-bold text-2xl">Feedback & Support</h3>
