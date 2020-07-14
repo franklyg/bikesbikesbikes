@@ -220,13 +220,9 @@ body{
 .buy-tag{
   position: absolute;
   top: 0;
-  right: -100%;
+  right: 0;
   background: #f16868;
   color: #fff;
-}
-.product-card:hover .buy-tag{
-  right: 0;
-  transition: all .5s;
 }
 
 
