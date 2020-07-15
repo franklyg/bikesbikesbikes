@@ -150,6 +150,17 @@ export default function TermsAndConditions() {
 
             <p>Applicable Law and Jurisdiction. Your use of the Company Service is governed by and will be enforced under the laws of the State of California without regard to its conflict of law provisions. You agree to submit to the personal and exclusive jurisdiction of the courts located within the jurisdiction noted above. You agree that printed copies of any and all agreements and/or notices in electronic form are admissible in any legal or regulatory proceedings. Any controversy, claim, suit, injury or damage arising from or in any way related to the Company Service or these Terms of Service shall be settled by binding arbitration in accordance with the commercial arbitration rules of the American Arbitration Association then in effect and before a single arbitrator chosen by Company. Any such controversy, claim, suit, injury or damage shall be arbitrated on an individual basis and shall not be consolidated in any arbitration with any controversy, claim, suit, injury or damage of any other party. Company may seek any interim or preliminary relief from a court of competent jurisdiction in the State listed above necessary to protect its rights pending the completion of arbitration. Each party shall assume its own costs of arbitration. IN ANY CLAIM, ACTION OR PROCEEDING TO ENFORCE ANY RIGHT OR OBLIGATION OF THE PARTIES UNDER THE TERMS OF SERVICE INCLUDING, WITHOUT LIMITATION, RELATING TO YOUR USE OF THE COMPANY SERVICE, YOU HEREBY WAIVE ANY RIGHT YOU MAY NOW HAVE OR HEREAFTER POSSESS TO A TRIAL BY JURY.</p>
             <p>Customer Service. If you have any comments or questions regarding these Terms of Service or wish to report any violation of these Terms of Service, you may contact us at the addresses below. Email Address: support@ineedbikeparts.com</p>
+
+            <p>I Need Bike Parts was designed for, and is intended for use on the desktop mobile web in accordance with the rules and regulations <a href="https://affiliate-program.amazon.com/gp/associates/help/operating/participation/">Associates Program Participation Requirements.</a> I Need Bike Parts is identified as a participant of Amazon’s Associated program, therefore by adding product recommendations to I Need Bike Parts, you are granting I Need Bike Parts and its owners to earn advertising fees from qualifying products made by end users through the Associates Program offered by Amazon.com, Inc. or its affiliates.</p>
+
+            <p>I Need Bike Parts is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com</p>
+
+            <p>Since 2020 I Need Bike Parts has been handpicking only the best selling, most interesting, most desired, and just plain best products on the web.</p>
+
+            <p>We do not list products solely for a commission. Our goal is to show the best content possible, and if a product happens to have an affiliate program, we'll apply it, but it has no impact on our decision making.</p>
+
+            <p>Affiliate links do not impact your cost as a consumer in anyway. Your cost to purchase goods is the same regardless of our affiliate links.</p>
+
           </div>
         </Container>
       </Layout>
