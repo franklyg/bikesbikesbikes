@@ -46,7 +46,7 @@ class ProductCard extends React.Component{
                                 />
                               </div>
                               <h3 className="product-name px-4 text-1xl py-2 font-poppins">
-                                {card.product_card_title[0].text.length > 40 ? card.product_card_title[0].text.substring(0, 40) + '...' : card.product_card_title[0].text }
+                                {card.product_card_title[0].text.length > 100 ? card.product_card_title[0].text.substring(0, 100) + '...' : card.product_card_title[0].text }
                               </h3>
                               <div className="px-4 pb-2 font-poppins">
                                 <div className="product-price text-2xl font-bold pt-3 border-t-2 border-gray-200">

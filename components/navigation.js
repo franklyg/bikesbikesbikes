@@ -67,7 +67,7 @@ class MainNavigation extends React.Component{
               <div className={`link-collection flex flex-col md:flex-row md:justify-end ${this.state.showHideSidenav}`}>
                 <div className="link-group pb-2 md:pb-0">
                   <div className="link-main flex flex-row grid grid-cols-4 md:grid-cols-none align-center px-6 md:px-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24" fill="white"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
                     <Link href="/cranksets">
                       <a className="link-item px-0 md:px-3 col-span-3">
                         Cranksets
@@ -92,7 +92,7 @@ class MainNavigation extends React.Component{
 
                 <div className="link-group pb-2 md:pb-0">
                   <div className="link-main flex flex-row grid grid-cols-4 md:grid-cols-none align-center px-6 md:px-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24" fill="white"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
                     <Link href="/handlebars">
                       <a className="link-item px-0 md:px-3 col-span-3">
                         Handlebars
@@ -120,7 +120,7 @@ class MainNavigation extends React.Component{
 
                 <div className="link-group pb-2 md:pb-0">
                   <div className="link-main flex flex-row grid grid-cols-4 md:grid-cols-none align-center px-6 md:px-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24" fill="white"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
                     <Link href="/saddles">
                       <a className="link-item px-0 md:px-3 col-span-3">
                         Saddles
@@ -139,7 +139,7 @@ class MainNavigation extends React.Component{
 
                 <div className="link-group pb-2 md:pb-0">
                   <div className="link-main flex flex-row grid grid-cols-4 md:grid-cols-none align-center px-6 md:px-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24" fill="white"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
                     <Link href="/wheels">
                       <a className="link-item px-0 md:px-3 col-span-3">
                         Wheels
@@ -176,7 +176,7 @@ class MainNavigation extends React.Component{
 
                 <div className="link-group pb-2 md:pb-0">
                   <div className="link-main flex flex-row grid grid-cols-4 md:grid-cols-none align-center px-6 md:px-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="link-arrow w-4 h-4 col-span-1 md:hidden" viewBox="0 0 24 24" fill="white"><path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/></svg>
                     <Link href="/accessories">
                       <a className="link-item px-0 md:px-3 col-span-3">
                         Accessories
