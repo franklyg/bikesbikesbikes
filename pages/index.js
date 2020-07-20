@@ -56,7 +56,7 @@ class ProductCard extends React.Component{
                                 url={card.product_card_image.url}
                               />
                             </div>
-                            <h3 className="product-name px-4 text-1xl py-2 font-poppins">
+                            <h3 className="product-name px-4 text-1xl py-2 font-poppins leading-relaxed">
                               {card.product_card_title[0].text.length > 100 ? card.product_card_title[0].text.substring(0, 100) + '...' : card.product_card_title[0].text }
                             </h3>
                             <div className="px-4 pb-2 font-poppins">
@@ -67,9 +67,9 @@ class ProductCard extends React.Component{
                           </div>
                         </CSSTransition>
                       </LazyLoad>
-                      <div className="buy-tag font-bold py-2 px-4 font-abel rounded-bl-lg grid grid-cols-2 items-center justify-end hidden md:flex">
-                        <span className="col-span-1">View Now</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="arrow w-4 h-4 col-span-1" viewBox="0 0 24 24"><path d="M17.428 5h-17.428l6.616 7-6.616 7h17.428l6.572-7z"/></svg>
+                      <div className="buy-tag font-bold py-2 px-4 font-abel rounded-bl-lg items-center justify-end flex flex-row shadow-md">
+                        <span>View Now on Amazon</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="arrow w-4 h-4" viewBox="0 0 24 24"><path d="M17.428 5h-17.428l6.616 7-6.616 7h17.428l6.572-7z"/></svg>
                       </div>
                     </a>
                   )
