@@ -5,6 +5,7 @@ export default function Meta() {
   return (
     <Head>
       <title>I Need Bike Parts</title>
+      <meta name="google-site-verification" content="yQROSvzhPJ4ty7KoFd301T2xAaxCmPiuaU_sv6MBOgs" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
